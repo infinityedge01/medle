@@ -363,6 +363,9 @@
           style='margin: 0 8px'>|</span><%= it.curator %></p>
       <% if (it.isDaily) { %>
       <p style='color: #999' data-t='daily-update'></p>
+      <div id='next-puzzle-container' class='hidden'>
+        <p style='color: #999' data-t='next-puzzle'></p>
+      </div>
       <% } %>
       <div class='bottom-shadow'></div>
     </div>
@@ -446,6 +449,8 @@ const tuneRevealOffset = <%= it.tuneRevealOffset %>;
 const isDaily = <%= it.isDaily %>;
 const guideToToday = <%= it.guideToToday %>;
 const todayDaily = <%~ JSON.stringify(it.todayDaily) %>;
+
+const availablePuzzleIds = <%~ JSON.stringify(it.availablePuzzleIds) %>;
 
 const i18nVars = <%~ JSON.stringify(it.i18nVars) %>;
 </script>

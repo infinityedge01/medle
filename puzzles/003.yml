@@ -11,18 +11,18 @@ tune:
   - [6, 6]
 tuneBeatDur: 91
 tunePitchBase: E5
-metronome: [1, 4]
+metronome: [0, 8]
 
 tuneRevealBeatDur: 91
 tuneRevealOffset: 1207
 
 zh-Hans:
   title: 炉心融解
-  author: iroha(sasaki)
+  author: iroha(sasaki), 鏡音リン
   desc: 无描述。
 en:
   title: Meltdown
-  author: iroha(sasaki)
+  author: iroha(sasaki), Kagamine Rin
   desc: No description.
 
 curator: lightbulb

@@ -684,23 +684,38 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+const getPuzzleId = (index) => {
+  const lastChar = index[index.length-1];
+  let suffix = '';
+  let id = 0;
+  if (lastChar >= 'a' && lastChar <= 'z') {
+    suffix = lastChar;
+    id = parseInt(index.toString().substring(0, index.length-1));
+  } else {
+    id = parseInt(index.toString().padStart(3, '0'));
+  }
+  return [id, suffix]
+}
+
 // Archive
 const puzzleLink = (index) => {
+  let decomposition = getPuzzleId(index);
+  let id = decomposition[0];
+  // let suffix = decomposition[1];
+  let date = new Date('2022-05-12');
   const a = document.createElement('a');
   a.classList.add('puzzle-link');
-  const id = index.toString().padStart(3, '0');
-  const date = new Date('2022-05-12');
-  date.setDate(date.getDate() + (index - 1));
+  date.setDate(date.getDate() + (id - 1));
   a.innerHTML =
     date.getFullYear() + '.' +
     (date.getMonth() + 1).toString().padStart(2, '0') + '.' +
     (date.getDate()).toString().padStart(2, '0') +
-    ` — <strong>${id}</strong>`;
-  if (id === puzzleId) {
+    ` — <strong>${index}</strong>`;
+  if (index === puzzleId) {
     a.classList.add('current');
     a.setAttribute('href', `javascript:closeModal()`);
   } else {
-    a.setAttribute('href', `/${id}?past`);
+    a.setAttribute('href', `/${index}?past`);
   }
   return a;
 };
@@ -708,17 +723,37 @@ if (isDaily) {
   document.getElementById('icon-btn-archive').addEventListener('click', () => {
     showModal('modal-archive');
   });
-
   const container = document.getElementById('archive-container');
-  const latest = parseInt(todayDaily);
-  for (let i = latest; i >= 1; i--) {
-    container.appendChild(puzzleLink(i));
+  availablePuzzleIds.sort((x, y) => {
+    let xd = getPuzzleId(x); let yd = getPuzzleId(y);
+    if (xd[0] > yd[0]) return -1;
+    if (xd[0] < yd[0]) return 1;
+    if (xd[1] > yd[1]) return 1;
+    if (xd[1] < yd[1]) return -1;
+    return 0;
+  })
+  for (let id of availablePuzzleIds) {
+    container.appendChild(puzzleLink(id));
+  }
+  let decomposition = getPuzzleId(puzzleId);
+  let id = decomposition[0].toString().padStart(3, '0');
+  let suffix = (decomposition[1] == '') ? 'a' : String.fromCharCode(decomposition[1].charCodeAt(0) + 1);
+  if (availablePuzzleIds.indexOf(id + suffix) != -1) {
+    let container = document.getElementById('next-puzzle-container');
+    container.classList.remove('hidden')
+    container.appendChild(puzzleLink(id + suffix));
   }
 }
 if (guideToToday) {
   const guideLinks = document.getElementById('guide-today-links');
   guideLinks.appendChild(puzzleLink(puzzleId));
   guideLinks.appendChild(puzzleLink(todayDaily));
+  let suffix = 'a';
+  console.log((todayDaily + suffix) in availablePuzzleIds);
+  while (availablePuzzleIds.indexOf(todayDaily + suffix) != -1) {
+    guideLinks.appendChild(puzzleLink(todayDaily + suffix));
+    suffix = String.fromCharCode(suffix.charCodeAt(0) + 1);
+  }
   showModal('modal-guide-today');
 }
 
