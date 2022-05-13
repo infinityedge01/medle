@@ -1,0 +1,28 @@
+tune:
+  - [6, 4]
+  - [5, 4]
+  - [3, 4]
+  - [6-, 4]
+  - [1, 4]
+  - [7-, 2]
+  - [1, 4]
+  - [6, 4]
+  - [5, 2]
+  - [6, 6]
+tuneBeatDur: 91
+tunePitchBase: E5
+metronome: [1, 4]
+
+tuneRevealBeatDur: 91
+tuneRevealOffset: 1207
+
+zh-Hans:
+  title: 炉心融解
+  author: iroha(sasaki)
+  desc: 无描述。
+en:
+  title: Meltdown
+  author: iroha(sasaki)
+  desc: No description.
+
+curator: lightbulb
