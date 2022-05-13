@@ -1,9 +1,7 @@
-# Medle
+# VOCALO Medle
 
-[**medle.0-th.art**](https://medle.0-th.art/)
-
-旋律猜谜游戏，每日更新~  
-Daily melody puzzle game (available in en/zh)
+曲库为术力口曲的旋律猜谜游戏，不定期更新
+VOCALO melody puzzle game (available in en/zh)
 
 ## [zh] 服务端程序
 

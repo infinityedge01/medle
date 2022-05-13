@@ -695,7 +695,7 @@ const puzzleLink = (index) => {
     date.getFullYear() + '.' +
     (date.getMonth() + 1).toString().padStart(2, '0') + '.' +
     (date.getDate()).toString().padStart(2, '0') +
-    ` — <strong>#${id}</strong>`;
+    ` — <strong>${id}</strong>`;
   if (id === puzzleId) {
     a.classList.add('current');
     a.setAttribute('href', `javascript:closeModal()`);

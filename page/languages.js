@@ -60,7 +60,7 @@ window.languages = [
     'rule-31': 'One of the notes “1” is correct; there are additionally two such notes in the solution, but not in places guessed as “1”.',
     'rule-41': 'All other symbols affect only the sound and not the rules.',
     'rule-51': 'The game is not affected by symbols other than numbers and tints, whose meanings are left for exploration to the curious player.',
-    'rule-61': 'There are 5 chances. Have fun!',
+    'rule-61': 'There are 5 or 6 chances. Have fun!',
     'daily-update': 'A new puzzle is published every day at 16:00 UTC. It will be delighting to see you come back!',
     'guide-today-1-pfx': 'You are currently visiting a past puzzle ',
     'guide-today-1-sfx': '.',
