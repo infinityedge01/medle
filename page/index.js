@@ -381,7 +381,7 @@ const startGame = () => {
   initialRow.fast(true);
   initialRow.show(false);
   attRows.push(initialRow);
-
+  console.log(tune)
   for (let i = 0; i < N; i++) {
     const ts = tune[i];
     for (let j = 1; j < ts.length; j++) {
@@ -401,7 +401,7 @@ const startGame = () => {
     initialRow.fast(false);
   }, (tuneDur + metronomeOffset()) * tuneBeatDur);
   setTimeout(() => showButtons(true), tuneDur * tuneBeatDur + 1000);
-
+  console.log(tune)
   // Replay
   let replayTimers = [];
   let curReplay = -1;
@@ -541,8 +541,8 @@ const startGame = () => {
   new ClipboardJS(btnShare, {
     text: () => {
       btnShare.classList.add('copied');
-      const prefix = `Medle #${puzzleId} ${succeeded ? attResults.length : 'X'}/${attemptsLimit}\n`;
-      const suffix = `https://medle.0-th.art/` +
+      const prefix = `VOCALO Medle ${puzzleId} ${succeeded ? attResults.length : 'X'}/${attemptsLimit}\n`;
+      const suffix = `http://medle.phystack.top` +
         (puzzleId === todayDaily ? '' : puzzleId);
       return prefix +
         attResults.map((result) => result.map((r) => {
@@ -689,7 +689,7 @@ const puzzleLink = (index) => {
   const a = document.createElement('a');
   a.classList.add('puzzle-link');
   const id = index.toString().padStart(3, '0');
-  const date = new Date('2022-02-21');
+  const date = new Date('2022-05-13');
   date.setDate(date.getDate() + (index - 1));
   a.innerHTML =
     date.getFullYear() + '.' +
