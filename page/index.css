@@ -404,6 +404,9 @@ body.nota-alpha .tune-dot {
   position: absolute;
   bottom: 12px;
 }
+#next-puzzle-container.hidden {
+  display: none;
+}
 .list.btn {
   margin: 18px 12px;
 }
