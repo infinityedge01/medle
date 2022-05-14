@@ -48,6 +48,19 @@ const bend = (s) => {
   return parseFloat(s.substring(i + 1)) / 440;
 };
 
+const getPuzzleId = (index) => {
+  const lastChar = index[index.length-1];
+  let suffix = '';
+  let id = 0;
+  if (lastChar >= 'a' && lastChar <= 'z') {
+    suffix = lastChar;
+    id = parseInt(index.toString().substring(0, index.length-1));
+  } else {
+    id = parseInt(index.toString().padStart(3, '0'));
+  }
+  return [id, suffix]
+}
+
 const noSuchPuzzle = () => new Response('No such puzzle > <\n', { status: 404 });
 
 const servePuzzle = async (req, puzzleId, checkToday) => {
@@ -108,11 +121,25 @@ const servePuzzle = async (req, puzzleId, checkToday) => {
   }
   puzzleContents.i18nVars = i18n;
 
-  const isDaily = !!puzzleId.match(/^[0-9]{3,}$/g);
+  const isDaily = !!puzzleId.match(/^[0-9]{3,}[a-z]?$/g);
   puzzleContents.guideToToday =
     (checkToday && isDaily && parseInt(puzzleId) < parseInt(today));
   puzzleContents.isDaily = isDaily;
   puzzleContents.todayDaily = today;
+
+  const puzzleNames = Deno.readDirSync("./puzzles/");
+  const validPuzzleIds = []
+  for (const entry of puzzleNames) {
+    if (entry.isDirectory) continue;
+    const fileName = entry.name;
+    const isValid = !!fileName.match(/^[0-9]{3,}[a-z]?\.yml$/g);
+    if (!isValid) continue;
+    let index = fileName.substring(0, fileName.length - 4);  // remove the file extension '.yml'
+    let decomposition = getPuzzleId(index);
+    if (decomposition[0] > todaysPuzzleIndex()) continue; // should not show the future puzzles.
+    validPuzzleIds.push(index);
+  }
+  puzzleContents.availablePuzzleIds = validPuzzleIds;
 
   log(`puzzle ${puzzleId} ${analytics(req)}`);
   const pageContents = indexTemplate(puzzleContents, etaConfig);

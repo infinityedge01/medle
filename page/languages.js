@@ -42,6 +42,7 @@ window.languages = [
     'opt-lang': '界面语言',
     'opt-source': '程序源码',
     'opt-dist': '依照木兰公共许可证分发',
+    'next-puzzle': '这一天的下一道谜题：',
   }],
   ['en', 'English', {
     'loading': 'Loading…',
@@ -61,7 +62,7 @@ window.languages = [
     'rule-41': 'All other symbols affect only the sound and not the rules.',
     'rule-51': 'The game is not affected by symbols other than numbers and tints, whose meanings are left for exploration to the curious player.',
     'rule-61': 'There are 5 or 6 chances. Have fun!',
-    'daily-update': 'A new puzzle is published every day at 16:00 UTC. It will be delighting to see you come back!',
+    'daily-update': 'Some new puzzles are published every day at 16:00 UTC. It will be delighting to see you come back!',
     'guide-today-1-pfx': 'You are currently visiting a past puzzle ',
     'guide-today-1-sfx': '.',
     'guide-today-2-pfx': 'Would you like to continue playing, or visit today\'s daily puzzle ',
@@ -86,5 +87,6 @@ window.languages = [
     'opt-lang': 'Language',
     'opt-source': 'Program source',
     'opt-dist': ' distributed under the Mulan Public License',
+    'next-puzzle': 'Next puzzle of this day:',
   }],
 ];
