@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-unused-vars prefer-const no-window-prefix
 const N = tune.length;
 const DECO_8VA = 1;
 const DECO_8VB = 2;
