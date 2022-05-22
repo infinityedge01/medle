@@ -114,6 +114,7 @@ body.dark #icon-btns-container > div:active {
   font-size: 22px;
   overflow: visible;
 }
+
 .list .bubble > div.content {
   background: rgba(220, 220, 220, 80%);
   border-radius: 50%;
@@ -127,6 +128,7 @@ body.dark #icon-btns-container > div:active {
   border: 1px solid transparent;
   transition: opacity 0.5s ease, transform 0.5s ease, background 0.5s ease, border-color 0.5s ease;
 }
+
 .list > .bg > .bubble.none > div.content {
   background: rgba(240, 240, 240, 80%);
 }
@@ -220,6 +222,124 @@ body.dark .list.btn.disabled .bubble > div.content {
   transform: translateX(-50%) scale(1.2);
 }
 .list.hidden .bubble:not(.nohidden) {
+  pointer-events: none;
+}
+
+.list .small-bubble {
+  display: inline-block;
+  flex: 1 1 40px;
+  height: 55px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  overflow: visible;
+}
+.list .small-bubble > div.content {
+  background: rgba(220, 220, 220, 80%);
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+  opacity: 1;
+  border: 1px solid transparent;
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+}
+.list > .bg > .small-bubble.none > div.content {
+  background: rgba(240, 240, 240, 80%);
+}
+.list > .bg > .small-bubble.bingo > div.content {
+  background: rgba(128, 216, 48, 80%);
+}
+.list > .bg > .small-bubble.maybe > div.content {
+  background: rgba(240, 232, 64, 80%);
+}
+body.dark .list > .bg > .small-bubble:not(.outline):not(.none):not(.bingo):not(.maybe) > div.content {
+  background: rgba(72, 72, 72, 80%);
+}
+body.dark .list > .bg > .small-bubble.none > div.content {
+  background: rgba(45, 45, 45, 80%);
+}
+body.dark .list > .bg > .small-bubble.bingo > div.content {
+  background: rgba(128, 216, 48, 65%);
+}
+body.dark .list > .bg > .small-bubble.maybe > div.content {
+  background: rgba(240, 232, 64, 65%);
+}
+/*body.altpal .list > .bg > .small-bubble.bingo > div.content {
+  background: rgba(48, 192, 255, 80%);
+}
+body.altpal .list > .bg > .small-bubble.maybe > div.content {
+  background: rgba(232, 224, 64, 80%);
+}*/
+body.highcon .list > .bg > .small-bubble.bingo > div.content {
+  border-color: #808080;
+  border-width: 2px;
+}
+body.highcon .list > .bg > .small-bubble.maybe > div.content {
+  border-color: #808080;
+  border-width: 2px;
+  border-style: dashed;
+}
+body.highcon.dark .list > .bg > .small-bubble.bingo > div.content,
+body.highcon.dark .list > .bg > .small-bubble.maybe > div.content {
+  border-color: #f0f0f0;
+}
+.list .small-bubble.hidden > div.content,
+.list.hidden .small-bubble:not(.nohidden) > div.content,
+.list.hidden.must .small-bubble > div.content {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.5);
+  pointer-events: none;
+}
+.list .small-bubble.outline > div.content {
+  background: rgba(250, 250, 250, 80%);
+}
+.list .small-bubble.outline:not(.hidden) > div.content {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  border-color: #999;
+}
+.list .small-bubble.outline:not(.hidden).large > div.content {
+  transform: translateX(-50%) scale(1.2);
+  transition: opacity 0.5s ease, transform 0.15s ease, background 0.5s ease, border-color 0.5s ease;
+}
+body.dark .list .small-bubble.outline:not(.hidden) > div.content {
+  border-color: #707070;
+  background: rgba(40, 40, 40, 80%);
+}
+.list .small-bubble.fast > div.content {
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.list .small-bubble.fast-pop > div.content {
+  transition: opacity 0.5s ease, transform 0.15s ease, background 0.5s ease, border-color 0.5s ease;
+}
+.list > .fg > .small-bubble > div.content {
+  background: none;
+  z-index: 910;
+  pointer-events: none;
+}
+.list.btn .small-bubble > div.content {
+  transform: translateX(-50%) scale(1.2);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.list.btn .small-bubble > div.content:active {
+  background: rgba(200, 200, 200, 80%);
+}
+.list.btn.disabled .small-bubble > div.content {
+  background: rgba(240, 240, 240, 80%);
+  pointer-events: none;
+}
+body.dark .list.btn.disabled .small-bubble > div.content {
+  background: rgba(45, 45, 45, 80%);
+}
+.list .small-bubble.large > div.content {
+  transform: translateX(-50%) scale(1.2);
+}
+.list.hidden .small-bubble:not(.nohidden) {
   pointer-events: none;
 }
 
@@ -354,6 +474,95 @@ body.nota-alpha .tune-dot {
   transform: translate(10px);
   opacity: 0.8;
 }
+
+body.nota-num .fg > .small-bubble.solf-1 > div.content:before { content: '1'; }
+body.nota-num .fg > .small-bubble.solf-2 > div.content:before { content: '2'; }
+body.nota-num .fg > .small-bubble.solf-3 > div.content:before { content: '3'; }
+body.nota-num .fg > .small-bubble.solf-4 > div.content:before { content: '4'; }
+body.nota-num .fg > .small-bubble.solf-5 > div.content:before { content: '5'; }
+body.nota-num .fg > .small-bubble.solf-6 > div.content:before { content: '6'; }
+body.nota-num .fg > .small-bubble.solf-7 > div.content:before { content: '7'; }
+body.nota-solf .fg > .small-bubble > div.content:before { font-size: 16px; }
+body.nota-solf .fg > .small-bubble.solf-1 > div.content:before { content: 'do'; }
+body.nota-solf .fg > .small-bubble.solf-2 > div.content:before { content: 're'; }
+body.nota-solf .fg > .small-bubble.solf-3 > div.content:before { content: 'mi'; }
+body.nota-solf .fg > .small-bubble.solf-4 > div.content:before { content: 'fa'; }
+body.nota-solf .fg > .small-bubble.solf-5 > div.content:before { content: 'sol'; }
+body.nota-solf .fg > .small-bubble.solf-6 > div.content:before { content: 'la'; }
+body.nota-solf .fg > .small-bubble.solf-7 > div.content:before { content: 'si'; }
+body.nota-alpha .fg > .small-bubble > div.content:before { font-size: 16px; }
+/* Alphabetic notation note names: automatically generated */
+body.nota-roman .fg > .small-bubble > div.content:before { font-size: 16px; }
+body.nota-roman .fg > .small-bubble.solf-1 > div.content:before { content: 'I'; }
+body.nota-roman .fg > .small-bubble.solf-2 > div.content:before { content: 'II'; }
+body.nota-roman .fg > .small-bubble.solf-3 > div.content:before { content: 'III'; }
+body.nota-roman .fg > .small-bubble.solf-4 > div.content:before { content: 'IV'; }
+body.nota-roman .fg > .small-bubble.solf-5 > div.content:before { content: 'V'; }
+body.nota-roman .fg > .small-bubble.solf-6 > div.content:before { content: 'VI'; }
+body.nota-roman .fg > .small-bubble.solf-7 > div.content:before { content: 'VII'; }
+body.nota-aikin .fg > .small-bubble > div.content:before { font-family: 'Medle Icons Collection - 220309'; }
+body.nota-aikin .fg > .small-bubble.solf-1 > div.content:before {
+  content: '\f04b';
+  font-size: 20px;
+  transform: rotate(-90deg);
+  display: block;
+  position: relative;
+  top: -2px;
+}
+body.nota-aikin .fg > .small-bubble.solf-2 > div.content:before {
+  content: '\1f319';
+  font-size: 20px;
+  transform: rotate(-70deg);
+  display: block;
+  position: relative;
+  top: -2px;
+}
+body.nota-aikin .fg > .small-bubble.solf-3 > div.content:before { content: '\f219'; }
+body.nota-aikin .fg > .small-bubble.solf-4 > div.content:before {
+  content: '\f0d8';
+  font-size: 28px;
+  transform: rotate(45deg);
+  display: block;
+  position: relative;
+  top: -3px;
+  left: 3px;
+}
+body.nota-aikin .fg > .small-bubble.solf-5 > div.content:before { content: '\1f7e4'; }
+body.nota-aikin .fg > .small-bubble.solf-6 > div.content:before { content: '\f0c8'; }
+body.nota-aikin .fg > .small-bubble.solf-7 > div.content:before { content: '\f041'; }
+
+.list .small-bubble.hidden > div > div.tune-dot {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+.list .small-bubble.outline > div > div.tune-dot {
+  background-color: transparent;
+  border-color: #999;
+}
+
+.list .small-bubble.outline > * > .accidental::before {
+  opacity: 0;
+}
+.list .small-bubble.outline > .flat > .accidental::before {
+  content: '\266d';
+  opacity: 0.4;
+}
+.list .small-bubble.outline > .sharp > .accidental::before {
+  content: '\266f';
+  opacity: 0.4;
+}
+/* Alphabetic notation accidentals: automatically generated */
+
+.list .small-bubble.appo {
+/*
+  flex-basis: 40px;
+  transform: translate(6.6px, -3px) scale(0.95);
+*/
+  flex-basis: 36px;
+  transform: translate(10px);
+  opacity: 0.8;
+}
+
 
 #list-container {
   margin-top: 32px;

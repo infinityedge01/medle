@@ -65,9 +65,9 @@ const createRow = (decos, parentEl, rowIndex) => {
   const el2 = div(el1, 'bg');
   const el3 = div(el1, 'fg');
   for (let i = 0; i < n; i++) {
-    const el4a = div(el2, 'bubble');
+    const el4a = n <= 10 ? div(el2, 'bubble') : div(el2, 'small-bubble');
     const el5a = div(el4a, 'content');
-    const el4b = div(el3, 'bubble');
+    const el4b = n <= 10 ? div(el3, 'bubble') : div(el3, 'small-bubble');
     const el5b = div(el4b, 'content');
     bgDivs.push(el4a);
     fgDivs.push(el4b);
@@ -543,7 +543,7 @@ const startGame = () => {
     text: () => {
       btnShare.classList.add('copied');
       const prefix = `VOCALO Medle ${puzzleId} ${succeeded ? attResults.length : 'X'}/${attemptsLimit}\n`;
-      const suffix = `http://medle.phystack.top` +
+      const suffix = `http://medle.phystack.top/` +
         (puzzleId === todayDaily ? '' : puzzleId);
       return prefix +
         attResults.map((result) => result.map((r) => {
