@@ -4,14 +4,14 @@
 <head>
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
-  <title>VOCALO Medle <%= it.id %></title>
+  <title>TOUHOU Medle #<%= it.id %></title>
   <link rel='stylesheet' href='/static/index.css'>
 </head>
 
 <body>
 
   <div id='container'>
-    <div id='page-title'>VOCALO Medle <%= it.id %></div>
+    <div id='page-title'>TOUHOU Medle #<%= it.id %></div>
     <div id='icon-btns-container'>
       <div id='icon-btn-help'>?</div>
       <div id='icon-btn-options' class='iconfont'>&#xf013;</div>
@@ -328,11 +328,18 @@
       <p style='text-align: center; color: #888' data-t='rule-51'></p>
       <br>
       <p data-t='rule-61'></p>
-      <p style='color: #999' data-t='daily-update'></p>
+      <p data-t='daily-update'></p>
+      <div style='color: #999'>
+        <span id='linking'>
+          <span data-t='links'></span>
+          <a href='https://medle.0-th.art'><span data-t='link-1'></span></a>
+          <a href='http://medle.phystack.top/'><span data-t='link-2'></span></a>
+        </span>
+      </div>
       <div class='bottom-shadow'></div>
     </div>
     <div class='modal hidden' id='modal-finish'>
-      <p class='title'>VOCALO Medle <%= it.id %></p>
+      <p class='title'>TOUHOU Medle <%= it.id %></p>
       <p id='reveal-title'><span style='margin-right: 9px;' class='iconfont'>&#x1f3b5;</span><strong
           data-t='=title'></strong></p>
       <p id='reveal-author'><span style='margin-right: 9px;' class='iconfont'>&#xf56b;</span><span data-t='=author'></p>
@@ -358,7 +365,7 @@
             data-t='btn-share'></span><span class='iconfont' style='visibility: hidden'>&#x2714;</span></span>
         <span id='btn-share-text-shared'><span class='iconfont'>&#x2714;</span> <span data-t='btn-shared'></span></span>
       </div>
-      <p style='color: #999'><span class='iconfont'>&#x266a;</span><span
+      <p style='color: #999'><span class='iconfont'>&#x266a; </span><span
           data-t='curator<% if (it.isDaily) { %>-today<% } %>'></span><span
           style='margin: 0 8px'>|</span><%= it.curator %></p>
       <% if (it.isDaily) { %>
@@ -410,7 +417,7 @@
       <br>
       <div style='color: #999'>
         <span>&copy; Medle 2022</span><br>
-        <span id='repo-notes'><a href='https://github.com/phynon/medle'><span data-t='opt-source'></span></a><span
+        <span id='repo-notes'><a href='https://github.com/CrMomi91/medle'><span data-t='opt-source'></span></a><span
             data-t='opt-dist'></span></span>
       </div>
       <div class='bottom-shadow'></div>

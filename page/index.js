@@ -542,14 +542,17 @@ const startGame = () => {
   new ClipboardJS(btnShare, {
     text: () => {
       btnShare.classList.add('copied');
-      const prefix = `VOCALO Medle ${puzzleId} ${succeeded ? attResults.length : 'X'}/${attemptsLimit}\n`;
-      const suffix = `http://medle.phystack.top/` +
+      const prefix = `TOUHOU Medle ${puzzleId} ${succeeded ? attResults.length : 'X'}/${attemptsLimit}\n`;
+      const suffix = `https://medle.akashiya.top/` +
         (puzzleId === todayDaily ? '' : puzzleId);
       return prefix +
         attResults.map((result) => result.map((r) => {
-          if (r === 0) return '\u{26aa}';
-          if (r === 1) return '\u{1f7e1}';
-          if (r === 2) return '\u{1f7e2}';
+          // if (r === 0) return '\u{26aa}';
+          // if (r === 1) return '\u{1f7e1}';
+          // if (r === 2) return '\u{1f7e2}';
+          if (r === 0) return 'Ｘ';
+          if (r === 1) return 'ｅ';
+          if (r === 2) return 'Ｏ';
         }).join('')).join('\n') +
         '\n' + suffix;
     }
@@ -614,6 +617,7 @@ const startGame = () => {
   };
 
   window.revealPlay = () => {
+    stopReplay();
     if (fadeOutTimer !== -1) clearTimeout(fadeOutTimer);
     if (playing) {
       answerAudio.fade(1, 0, 100);
@@ -703,7 +707,7 @@ const puzzleLink = (index) => {
   let decomposition = getPuzzleId(index);
   let id = decomposition[0];
   // let suffix = decomposition[1];
-  let date = new Date('2022-05-12');
+  let date = new Date('2022-05-27');
   const a = document.createElement('a');
   a.classList.add('puzzle-link');
   date.setDate(date.getDate() + (id - 1));
