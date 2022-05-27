@@ -2,7 +2,7 @@
 
 [**medle.akashiya.top**](https://medle.akashiya.top/)
 
-曲库为东方曲的旋律猜谜游戏，不定期更新
+曲库为东方曲的旋律猜谜游戏，每日更新~
 TOUHOU melody puzzle game (available in en/zh)
 
 源码在**木兰公共许可证**下分发，许可证文本见 [COPYING.MulanPubL.md](COPYING.MulanPubL.md)；也可选择遵循 **GNU Affero 通用公共许可证**，文本见 [COPYING.AGPL.md](COPYING.AGPL.md)。
