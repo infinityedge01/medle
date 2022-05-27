@@ -1,5 +1,7 @@
 # TOUHOU Medle
 
+[**medle.akashiya.top**](https://medle.akashiya.top/)
+
 曲库为东方曲的旋律猜谜游戏，不定期更新
 TOUHOU melody puzzle game (available in en/zh)
 
