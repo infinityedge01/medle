@@ -1,0 +1,31 @@
+tune:
+  - [6, 2]
+  - [5, 2]
+  - [6, 2]
+  - [3, 2]
+  - [1, 2]
+  - [7-, 2]
+  - [1, 2]
+  - [6-, 1]
+  - [7-, 1]
+  - [1, 4]
+  - [1+, 4]
+  - [7, 4]
+  - [5, 4]
+tuneBeatDur: 110
+tunePitchBase: C5
+metronome: [0, 4]
+
+tuneRevealBeatDur: 15000/163
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 哈德曼的妖怪少女（ハルトマンの妖怪少女）
+  author: Zun
+  desc: 东方地灵殿中，Extra面BOSS古明地恋的主题曲。
+en:
+  title: Hartmann's Youkai Girl（ハルトマンの妖怪少女）
+  author: Zun
+  desc: The extra stage boss Koishi Komeiji's theme, from Subterranean Animism.
+
+curator: 榆木华

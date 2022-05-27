@@ -1,0 +1,26 @@
+tune:
+  - [2, 14, -12]
+  - [3, 2]
+  - [1+, 12, -10]
+  - [7, 12, -10]
+  - [5, 12, -8]
+  - [1, 12]
+  - [3, 4]
+  - [5, 4]
+tuneBeatDur: 90
+tunePitchBase: F#4
+metronome: [-2, 4]
+
+tuneRevealBeatDur: 15000/170
+tuneRevealOffset: 15000/170*2
+
+zh-Hans:
+  title: Seraphic Chicken（セラフィックチキン）
+  author: Zun
+  desc: 东方鬼形兽中，3面BOSS庭渡久侘歌的主题曲。
+en:
+  title: Seraphic Chicken（セラフィックチキン）
+  author: Zun
+  desc: The stage 3 boss Kutaka Niwatari's theme, from Wily Beast and Weakest Creature.
+
+curator: 榆木华

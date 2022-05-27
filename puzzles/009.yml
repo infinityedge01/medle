@@ -1,0 +1,30 @@
+tune:
+  - [3, 4]
+  - [6, 4]
+  - [2+, 4]
+  - [1+, 10]
+  - [1+, 16, -14]
+  - [7, 16, -14]
+  - [5, 16, -14]
+  - [3, 16, 4]
+  - [5#, 4]
+  - [7, 4]
+  - [3+, 4]
+  - [1+, 16]
+tuneBeatDur: 100
+tunePitchBase: E4
+metronome: [12, 4]
+
+tuneRevealBeatDur: 15000/174
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 今宵是飘逸的自我主义者(Live ver) ～ Egoistic Flowers.（）
+  author: Zun
+  desc: 东方凭依华 主题曲。
+en:
+  title: （）
+  author: Zun
+  desc: The stage  theme from .
+
+curator: 榆木华

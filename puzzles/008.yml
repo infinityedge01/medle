@@ -1,0 +1,24 @@
+tune:
+  - [5, 16, -15]
+  - [6, 16, -15]
+  - [5, 16, -14]
+  - [3, 2]
+  - [2, 14, 2]
+  - [1, 16]
+tuneBeatDur: 110
+tunePitchBase: F5
+metronome: [6, 4]
+
+tuneRevealBeatDur: 15000/139
+tuneRevealOffset: 15000/139*64
+
+zh-Hans:
+  title: 众神眷恋的幻想乡（神々が恋した幻想郷）
+  author: Zun
+  desc: 东方风神录3面主题曲。
+en:
+  title: The Gensokyo the Gods Loved（神々が恋した幻想郷）
+  author: Zun
+  desc: The stage 3 theme from Mountain of Faith.
+
+curator: 榆木华
