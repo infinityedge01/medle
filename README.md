@@ -1,7 +1,7 @@
-# VOCALO Medle
+# TOUHOU Medle
 
-曲库为术力口曲的旋律猜谜游戏，不定期更新
-VOCALO melody puzzle game (available in en/zh)
+曲库为东方曲的旋律猜谜游戏，不定期更新
+TOUHOU melody puzzle game (available in en/zh)
 
 ## [zh] 服务端程序
 

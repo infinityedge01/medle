@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "曲库为东方曲的旋律猜谜游戏，不定期更新\r TOUHOU melody puzzle game (available in en/zh)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "eta": "^1.12.3",
+    "formidable": "^2.0.1",
+    "js-yaml": "^4.1.0"
+  }
+}
