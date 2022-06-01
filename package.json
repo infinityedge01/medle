@@ -16,6 +16,7 @@
   "dependencies": {
     "eta": "^1.12.3",
     "formidable": "^2.0.1",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "node-localstorage": "^2.2.1"
   }
 }

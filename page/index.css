@@ -82,8 +82,11 @@ body.dark #icon-btns-container > div {
 body.dark #icon-btns-container > div:active {
   background: rgba(45, 45, 45, 80%);
 }
-#icon-btn-help {
+#icon-btn-help, #icon-btn-stat {
   float: left;
+}
+#icon-btn-stat {
+  margin-left: 6px;
 }
 #icon-btns-container > div#icon-btn-options {
   float: right;
@@ -127,6 +130,17 @@ body.dark #icon-btns-container > div:active {
   opacity: 1;
   border: 1px solid transparent;
   transition: opacity 0.5s ease, transform 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+}
+
+body.smallscreen .list .bubble {
+  flex: 1 1 32px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 20px;
+}
+body.smallscreen .list .bubble > div.content {
+  width: 45px;
+  height: 45px;
 }
 
 .list > .bg > .bubble.none > div.content {
@@ -198,6 +212,15 @@ body.dark .list .bubble.outline:not(.hidden) > div.content {
 .list .bubble.fast-pop > div.content {
   transition: opacity 0.5s ease, transform 0.15s ease, background 0.5s ease, border-color 0.5s ease;
 }
+.list .bubble.filled > div.content {
+  transition: 0.1s;
+}
+.list .bubble.serrated > div.content {
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+}
+.list .bubble.serrated.large > div.content {
+  transition: 0.05s !important;
+}
 .list > .fg > .bubble > div.content {
   background: none;
   z-index: 910;
@@ -246,6 +269,16 @@ body.dark .list.btn.disabled .bubble > div.content {
   opacity: 1;
   border: 1px solid transparent;
   transition: opacity 0.5s ease, transform 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+}
+body.smallscreen .list .small-bubble {
+  flex: 1 1 32px;
+  height: 55px;
+  line-height: 32px;
+  font-size: 14px;
+}
+body.smallscreen .list .small-bubble > div.content {
+  width: 32px;
+  height: 32px;
 }
 .list > .bg > .small-bubble.none > div.content {
   background: rgba(240, 240, 240, 80%);
@@ -313,8 +346,17 @@ body.dark .list .small-bubble.outline:not(.hidden) > div.content {
 .list .small-bubble.fast > div.content {
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+.list .small-bubble.filled > div.content {
+  transition: 0.1s;
+}
 .list .small-bubble.fast-pop > div.content {
   transition: opacity 0.5s ease, transform 0.15s ease, background 0.5s ease, border-color 0.5s ease;
+}
+.list .small-bubble.serrated > div.content {
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+}
+.list .small-bubble.serrated.large > div.content {
+  transition: 0.05s !important;
 }
 .list > .fg > .small-bubble > div.content {
   background: none;
@@ -737,7 +779,7 @@ body.dark .modal .bottom-shadow {
   margin: 10px 0 15px 0;
 }
 #btn-play {
-  margin-bottom: 24px;
+  margin-bottom: 60px;
 }
 #reveal-desc > br {
   margin-bottom: 5px;
@@ -839,6 +881,7 @@ body.nota-solf .small-btn#btn-notation > span#btn-notation-text-solf { display: 
 body.nota-alpha .small-btn#btn-notation > span#btn-notation-text-alpha { display: inline; }
 body.nota-roman .small-btn#btn-notation > span#btn-notation-text-roman { display: inline; }
 body.nota-aikin .small-btn#btn-notation > span#btn-notation-text-aikin { display: inline; }
+body.nota-blank .small-btn#btn-notation > span#btn-notation-text-blank { display: inline; }
 #repo-notes {
   font-size: 13px;
   margin-top: 6px;
@@ -880,4 +923,307 @@ body.dark a.puzzle-link.current {
 }
 body.dark a.puzzle-link.current:active {
   background: rgba(108, 196, 28, 80%);
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 4px;
+}
+::-webkit-scrollbar-corner{
+  display: none;
+}
+::-webkit-scrollbar{
+  transition: 0.3s;
+}
+
+*::-webkit-scrollbar:hover{
+  background-color: #ddd;
+}
+*::-webkit-scrollbar-thumb{
+  background-color: #ccc;
+}
+* {
+  scrollbar-color: #ccc #ddd;
+  scrollbar-width: thin;
+}
+
+body.dark *::-webkit-scrollbar:hover{
+  background-color: #333;
+}
+body.dark *::-webkit-scrollbar-thumb{
+  background-color: #555;
+}
+body.dark * {
+  scrollbar-color: #555 #333;
+  scrollbar-width: thin;
+}
+
+.progress {
+  width: 100%;
+  height: 24px;
+  margin: 8px 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.progress.hidden {
+  display: none;
+}
+
+.progress * {
+  line-height: 24px;
+}
+
+.progress-bar-tag {
+  font-size: 0.9em;
+  width: 56px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.progress-bar-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.progress-bar, .progress-fail {
+  height: 24px;
+  padding-right: 5px;
+  text-align: right;
+  border-radius: 4px;
+}
+
+.progress-bar {
+  background: green;
+}
+
+.progress-outer-count, .stat-progress-outer-count {
+  margin-left: 5px;
+}
+
+.progress-outer-count.hidden, .stat-progress-outer-count.hidden {
+  display: none;
+  margin: 0;
+}
+
+.progress-bar-container {
+  background: #ccc;
+}
+
+.progress-fail {
+  background: #aaa;
+}
+
+.progress-bar {
+  background: #84cc43;
+}
+
+body.dark .progress-bar-container {
+  background: #444;
+}
+
+body.dark .progress-fail {
+  background: #777;
+}
+
+body.dark .progress-bar {
+  background: #3b642a;
+}
+
+.options-music-offset {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  height: 36px;
+  line-height: 36px;
+  margin-top: 35px;
+}
+
+.options-music-offset div {
+  text-align: center;
+}
+
+.options-music-offset div:not(:first-child) {
+  margin-left: 3px;
+}
+
+.options-music-offset div:not(:last-child) {
+  margin-right: 3px;
+}
+
+.options-music-offset-number {
+  flex: 1;
+}
+
+.options-music-offset-button {
+  width: 50px;
+  height: 36px;
+}
+
+.music-offset-adjuster-wrapper {
+  margin-bottom: 10px;
+}
+
+.music-offset-adjuster-wrapper div:not(:first-child) {
+  margin-left: 5px;
+}
+
+.music-offset-adjuster-wrapper div:not(:last-child) {
+  margin-right: 5px;
+}
+
+.music-offset-adjuster {
+  border-radius: 5px;
+  flex: 1;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#options-music-offset-adjuster {
+  height: 80px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+#options-music-offset-adjuster.hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+}
+
+.music-offset-adjuster {
+  background: #ccc;
+}
+
+.music-offset-adjuster.active {
+  background: #aaa;
+}
+
+body.dark .music-offset-adjuster {
+  background: #444;
+}
+
+body.dark .music-offset-adjuster.active {
+  background: #777;
+}
+
+.playButton > div {
+  margin-top: 12px;
+}
+
+#visualizer {
+  z-index: 992;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 75px);
+  overflow: hidden;
+  transition: opacity 0.3s;
+}
+
+#visualizer.hidden {
+  opacity: 0;
+}
+
+.visualizeNote {
+  position: absolute;
+  background: #72b536;
+}
+
+body.dark .visualizeNote {
+  background: #99E059;
+}
+
+.visualizeBeat {
+  width: 100%;
+  height: 1px;
+  top: 0px;
+  background: #777;
+  position: absolute;
+  left: 0;
+}
+
+body.dark .visualizeBeat {
+  background: #999;
+}
+
+.visualizeNote.highlighted {
+  background: #e95a5a !important;
+}
+
+#visualizer::after {
+  content: '';
+  z-index: 994;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, #fdfdfd);
+}
+
+body.dark #visualizer::after {
+  background: linear-gradient(180deg, transparent, #222);
+}
+
+#visualizerLines {
+  width: 100%;
+  height: 100%;
+}
+
+.visualizerLine {
+  z-index: 993;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  background: #777;
+}
+
+body.dark .visualizerLine {
+  background: white;
+}
+
+
+
+.visualizerRail {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  background: #ddd;
+}
+
+.visualizerRail.deep {
+  background: #bbb;
+}
+
+body.dark .visualizerRail {
+  background: #666;
+}
+
+body.dark .visualizerRail.deep {
+  background: #444;
+}
+
+#btn-play {
+  transition: 0.3s;
+}
+
+#btn-play.small {
+  margin-right: calc(100% - 50px);
+  transform: scale(0.5) translateY(100px);
+}
+
+#btn-stat .hidden {
+  display: none;
 }
