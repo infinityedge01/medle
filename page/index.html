@@ -5,7 +5,7 @@
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
   <title>TOUHOU Medle #<%= it.id %></title>
-  <link rel='stylesheet' href='/static/index.css'>
+  <link rel='stylesheet' href='/static/index.css?t=<%= it.currentTime %>'>
 </head>
 
 <body>
@@ -14,6 +14,10 @@
     <div id='page-title'>TOUHOU Medle #<%= it.id %></div>
     <div id='icon-btns-container'>
       <div id='icon-btn-help'>?</div>
+      <!-- Useless icons deleted, svg used here -->
+      <div id='icon-btn-stat'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" style="margin: 6px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32 32C49.67 32 64 46.33 64 64V400C64 408.8 71.16 416 80 416H480C497.7 416 512 430.3 512 448C512 465.7 497.7 480 480 480H80C35.82 480 0 444.2 0 400V64C0 46.33 14.33 32 32 32zM128 128C128 110.3 142.3 96 160 96H352C369.7 96 384 110.3 384 128C384 145.7 369.7 160 352 160H160C142.3 160 128 145.7 128 128zM288 192C305.7 192 320 206.3 320 224C320 241.7 305.7 256 288 256H160C142.3 256 128 241.7 128 224C128 206.3 142.3 192 160 192H288zM416 288C433.7 288 448 302.3 448 320C448 337.7 433.7 352 416 352H160C142.3 352 128 337.7 128 320C128 302.3 142.3 288 160 288H416z"/></svg>
+      </div>
       <div id='icon-btn-options' class='iconfont'>&#xf013;</div>
       <% if (it.isDaily) { %>
       <div id='icon-btn-archive' class='iconfont'>&#x1f4c6;</div>
@@ -147,6 +151,92 @@
       </div>
     </div>
 
+    <div class='modal hidden' id='modal-stat'>
+      <div class='options-btns-list'>
+        <span>📊 <span data-t='opt-stat'></span></span>
+        <div id='btn-stat' class='small-btn'>
+          <span id='btn-stat-0' data-t='opt-stat-1'></span>
+          <span id='btn-stat-1' data-t='opt-stat-2'></span>
+          <span id='btn-stat-2' data-t='opt-stat-3'></span>
+        </div>
+      </div>
+      <div class='progress' id='stat-progress-1'>
+        <div class='progress-bar-tag' data-t='step-1'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='stat-progress-bar-1'>
+            
+          </div>
+          <div class='progress-outer-count' id='stat-progress-outer-count-1'></div>
+        </div>
+      </div>
+      <div class='progress' id='stat-progress-2'>
+        <div class='progress-bar-tag' data-t='step-2'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='stat-progress-bar-2'>
+            
+          </div>
+          <div class='progress-outer-count' id='stat-progress-outer-count-2'></div>
+        </div>
+      </div>
+      <div class='progress' id='stat-progress-3'>
+        <div class='progress-bar-tag' data-t='step-3'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='stat-progress-bar-3'>
+            
+          </div>
+          <div class='progress-outer-count' id='stat-progress-outer-count-3'></div>
+        </div>
+      </div>
+      <div class='progress' id='stat-progress-4'>
+        <div class='progress-bar-tag' data-t='step-4'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='stat-progress-bar-4'>
+            
+          </div>
+          <div class='progress-outer-count' id='stat-progress-outer-count-4'></div>
+        </div>
+      </div>
+      <div class='progress' id='stat-progress-5'>
+        <div class='progress-bar-tag' data-t='step-5'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='stat-progress-bar-5'>
+            
+          </div>
+          <div class='progress-outer-count' id='stat-progress-outer-count-5'></div>
+        </div>
+      </div>
+      <div class='progress' id='stat-progress-6'>
+        <div class='progress-bar-tag' data-t='step-6'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='stat-progress-bar-6'>
+            
+          </div>
+          <div class='progress-outer-count' id='stat-progress-outer-count-6'></div>
+        </div>
+      </div>
+      <div class='progress' id='stat-progress-fail'>
+        <div class='progress-bar-tag' data-t='fail'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-fail' id='stat-progress-bar-fail'>
+            
+          </div>
+          <div class='progress-outer-count' id='stat-progress-outer-count-fail'></div>
+        </div>
+      </div>
+      <p style='padding-left: 10px; border-left: 3px solid #999'>
+        <span data-t='total-puzzles'></span>
+        <span style='float: right;' id='stat-total-puzzles'></span>
+      </p>
+      <p style='padding-left: 10px; border-left: 3px solid #999'>
+        <span data-t='accuracy'></span>
+        <span style='float: right;' id='stat-accuracy'></span>
+      </p>
+      <p style='padding-left: 10px; border-left: 3px solid #999'>
+        <span data-t='average-steps'></span>
+        <span style='float: right;' id='stat-average-step'></span>
+      </p>
+      <p style='color: #999' data-t='opt-stat-tip'></p>
+    </div>
     <div class='modal hidden' id='modal-intro'>
       <p class='title' data-t='rules'></p>
       <div class='options-btns-list'>
@@ -336,6 +426,11 @@
           <a href='http://medle.phystack.top/'><span data-t='link-2'></span></a>
         </span>
       </div>
+      <div style='color: #FFF'>
+        <span id='bonuses'>
+          <span data-t='bonus'></span>
+        </span>
+      </div>
       <div class='bottom-shadow'></div>
     </div>
     <div class='modal hidden' id='modal-finish'>
@@ -344,15 +439,25 @@
           data-t='=title'></strong></p>
       <p id='reveal-author'><span style='margin-right: 9px;' class='iconfont'>&#xf56b;</span><span data-t='=author'></p>
       <div id='answer-container'></div>
-      <div class='list btn disabled' id='btn-play'>
-        <div class='bg'>
-          <div class='bubble' onclick='revealPlay()'>
-            <div class='content'></div>
+      <div style='position: relative;'>
+        <div id='visualizer' class='hidden'>
+          <div id='visualizerLines'>
+          </div>
+          <div id='visualizerNotes'>
           </div>
         </div>
-        <div class='fg'>
-          <div class='bubble'>
-            <div class='content iconfont' id='btn-play-content'>&#xf141;</div>
+        <div style='position: relative; z-index: 995;'>
+          <div class='list btn disabled' id='btn-play'>
+            <div class='bg'>
+              <div class='bubble playButton' onclick='revealPlay()'>
+                <div class='content'></div>
+              </div>
+            </div>
+            <div class='fg'>
+              <div class='bubble playButton'>
+                <div class='content iconfont' id='btn-play-content'>&#xf141;</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -369,10 +474,93 @@
           data-t='curator<% if (it.isDaily) { %>-today<% } %>'></span><span
           style='margin: 0 8px'>|</span><%= it.curator %></p>
       <% if (it.isDaily) { %>
-      <p style='color: #999' data-t='daily-update'></p>
       <div id='next-puzzle-container' class='hidden'>
         <p style='color: #999' data-t='next-puzzle'></p>
       </div>
+      <% } %>
+      <p style='color: #999'><span class='iconfont'>&#128064; </span>
+        <span id='total-visitors'>-</span>&nbsp;<span data-t='visitors'></span>
+      </p>
+      <p style='color: #999; font-size: 0.6em'><span class='iconfont'>&#x1F4CA; </span>
+        <span data-t='guess-and-count'></span>
+      </p>
+      <div class='progress' id='progress-1'>
+        <div class='progress-bar-tag' data-t='step-1'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='progress-bar-1'>
+            
+          </div>
+          <div class='progress-outer-count' id='progress-outer-count-1'></div>
+        </div>
+      </div>
+      <div class='progress' id='progress-2'>
+        <div class='progress-bar-tag' data-t='step-2'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='progress-bar-2'>
+            
+          </div>
+          <div class='progress-outer-count' id='progress-outer-count-2'></div>
+        </div>
+      </div>
+      <div class='progress' id='progress-3'>
+        <div class='progress-bar-tag' data-t='step-3'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='progress-bar-3'>
+            
+          </div>
+          <div class='progress-outer-count' id='progress-outer-count-3'></div>
+        </div>
+      </div>
+      <div class='progress' id='progress-4'>
+        <div class='progress-bar-tag' data-t='step-4'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='progress-bar-4'>
+            
+          </div>
+          <div class='progress-outer-count' id='progress-outer-count-4'></div>
+        </div>
+      </div>
+      <div class='progress' id='progress-5'>
+        <div class='progress-bar-tag' data-t='step-5'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='progress-bar-5'>
+            
+          </div>
+          <div class='progress-outer-count' id='progress-outer-count-5'></div>
+        </div>
+      </div>
+      <div class='progress' id='progress-6'>
+        <div class='progress-bar-tag' data-t='step-6'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-bar' id='progress-bar-6'>
+            
+          </div>
+          <div class='progress-outer-count' id='progress-outer-count-6'></div>
+        </div>
+      </div>
+      <div class='progress' id='progress-fail'>
+        <div class='progress-bar-tag' data-t='fail'></div>
+        <div class='progress-bar-container'>
+          <div class='progress-fail' id='progress-bar-fail'>
+            
+          </div>
+          <div class='progress-outer-count' id='progress-outer-count-fail'></div>
+        </div>
+      </div>
+      <p style='padding-left: 10px; border-left: 3px solid #999'>
+        <span data-t='total-pass-person'></span>
+        <span style='float: right;' id='total-puzzles'></span>
+      </p>
+      <p style='padding-left: 10px; border-left: 3px solid #999'>
+        <span data-t='accuracy'></span>
+        <span style='float: right;' id='accuracy'></span>
+      </p>
+      <p style='padding-left: 10px; border-left: 3px solid #999'>
+        <span data-t='average-steps'></span>
+        <span style='float: right;' id='average-step'></span>
+      </p>
+      <% if (it.isDaily) { %>
+      <p style='color: #999' data-t='daily-update'></p>
       <% } %>
       <div class='bottom-shadow'></div>
     </div>
@@ -408,17 +596,49 @@
           <span id='btn-notation-text-alpha'><span data-t='opt-nota-alpha'></span></span>
           <span id='btn-notation-text-roman'><span data-t='opt-nota-roman'></span></span>
           <span id='btn-notation-text-aikin'><span data-t='opt-nota-aikin'></span></span>
+          <span id='btn-notation-text-blank'><span data-t='opt-nota-blank'></span></span>
         </div>
       </div>
       <div class='options-btns-list'>
         <span>🌐 <span data-t='opt-lang'></span></span>
         <div id='btn-lang' class='small-btn'></div>
       </div>
+      <div class='options-btns-list'>
+        <span>🎹 <span data-t='opt-flow'></span></span>
+        <div id='btn-flow' class='small-btn'></div>
+      </div>
+      <div class='options-btns-list'>
+        <span>🥁 <span data-t='opt-offset'></span></span>
+        <div id='btn-start-adjust' class='small-btn' data-t='adjust'></div>
+      </div>
+      <div style='color: #999; font-size: 0.6em; position: relative; width: 100%'>
+        <span style='float: left' data-t='music-faster'></span>
+        <span style='float: right' data-t='pop-faster'></span>
+      </div>
+      <div class='options-music-offset'>
+        <div class='small-btn options-music-offset-button' id='music-offset-delta-1'>-100</div>
+        <div class='small-btn options-music-offset-button' id='music-offset-delta-2'>-10</div>
+        <div class='options-music-offset-number' id='music-offset'>0</div>
+        <div class='small-btn options-music-offset-button' id='music-offset-delta-3'>+10</div>
+        <div class='small-btn options-music-offset-button' id='music-offset-delta-4'>+100</div>
+      </div>
+      <div id='options-music-offset-adjuster' class='hidden' style='width: 100%; margin: 15px 0px'>
+        <div style='display: flex; flex-direction: row; width: 100%' class='music-offset-adjuster-wrapper'>
+          <div id='music-offset-adjuster-1' class='music-offset-adjuster'>-</div>
+          <div id='music-offset-adjuster-2' class='music-offset-adjuster active'>-</div>
+          <div id='music-offset-adjuster-3' class='music-offset-adjuster'>-</div>
+          <div id='music-offset-adjuster-4' class='music-offset-adjuster'>-</div>
+        </div>
+        <div style='text-align: center; width: 100%; color: #999'>
+          <span data-t='cick-on-high-pitch'></span>
+        </div>
+      </div>
       <br>
       <div style='color: #999'>
         <span>&copy; Medle 2022</span><br>
         <span id='repo-notes'><a href='https://github.com/CrMomi91/medle'><span data-t='opt-source'></span></a><span
-            data-t='opt-dist'></span></span>
+            data-t='opt-dist'></span></span><br>
+        <span data-t='server'></span>&nbsp;<%= it.serverTime %>
       </div>
       <div class='bottom-shadow'></div>
     </div>
@@ -440,12 +660,12 @@
     <%~it.acciStyles %>
   </style>
 
-<script src='/static/howler.core.min.js'></script>
-<script src='/static/clipboard.min.js'></script>
-<script src='/static/languages.js'></script>
+<script src='/static/howler.core.min.js?t=<%= it.currentTime %>'></script>
+<script src='/static/clipboard.min.js?t=<%= it.currentTime %>'></script>
+<script src='/static/languages.js?t=<%= it.currentTime %>'></script>
 <script>
 const puzzleId = <%~ JSON.stringify(it.id) %>;
-const tune = <%~ JSON.stringify(it.tune) %>;
+const encodedTune = '<%~ it.tune %>';
 const tuneBeatDur = <%= it.tuneBeatDur %>;
 const tunePitchBase = <%= it.tunePitchBase %>;
 const tunePitchBend = <%= it.tunePitchBend %>;
@@ -459,9 +679,9 @@ const todayDaily = <%~ JSON.stringify(it.todayDaily) %>;
 
 const availablePuzzleIds = <%~ JSON.stringify(it.availablePuzzleIds) %>;
 
-const i18nVars = <%~ JSON.stringify(it.i18nVars) %>;
+const i18nVars = '<%~ (it.i18nVars) %>';
 </script>
-<script src='/static/index.js'></script>
+<script src='/static/index.js?t=<%= it.currentTime %>'></script>
 
 </body>
 
