@@ -915,14 +915,49 @@ body.dark a.puzzle-link:not(.current):active {
   background: rgba(45, 45, 45, 80%);
 }
 a.puzzle-link.current {
-  background: rgba(128, 216, 48, 80%);
+  background: #c0dcffcc;
+  box-shadow: 0px 0px 10px #a4bdddcc;
   color: #222;
 }
+a.puzzle-link.current:active {
+  background: #7db8ffcc;
+  box-shadow: 0px 0px 10px #7897becc;
+}
 body.dark a.puzzle-link.current {
-  background: rgba(128, 216, 48, 80%);
+  background: #4c8dc2cc;
+  color: #fff;
 }
 body.dark a.puzzle-link.current:active {
-  background: rgba(108, 196, 28, 80%);
+  background: #407aaacc;
+}
+a.puzzle-link.success {
+  background: rgba(153, 244, 89, 20%);
+  border: 2px solid #460;
+}
+a.puzzle-link.success:active {
+  background: rgba(153, 244, 89, 60%);
+}
+body.dark a.puzzle-link.success {
+  background: rgba(128, 216, 48, 40%);
+  border: 2px solid #8a8;
+}
+body.dark a.puzzle-link.success:active {
+  background: rgba(98, 186, 18, 40%);
+}
+a.puzzle-link.fail {
+  background: rgb(244, 89, 89, 20%);
+  border: 2px dashed #822;
+}
+a.puzzle-link.fail:active {
+  background: rgb(244, 89, 89, 40%);
+}
+body.dark a.puzzle-link.fail {
+  background: rgb(255, 58, 58, 40%);
+  border: 2px dashed #c88;
+}
+body.dark a.puzzle-link.fail:active {
+  background: rgb(225, 28, 28, 40%);
+  border: 2px dashed #c88;
 }
 
 ::-webkit-scrollbar{
