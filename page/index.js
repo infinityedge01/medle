@@ -18,6 +18,7 @@ const DECO_FLAT = 8;
 const DECO_APPO = 16;
 const MIN_PITCH = 24;
 const MAX_PITCH = 105;
+const dailyList = ['', 'EX', 'PH'];
 const tuneDecos = tune.map((note) => {
   let a = note[0];
   let r = 0;
@@ -1294,6 +1295,9 @@ const getPuzzleId = (index) => {
 }
 
 // Archive
+
+let currentPuzzleLink = undefined;
+
 const puzzleLink = (index) => {
   let decomposition = getPuzzleId(index);
   let id = decomposition[0];
@@ -1307,8 +1311,16 @@ const puzzleLink = (index) => {
     (date.getMonth() + 1).toString().padStart(2, '0') + '.' +
     (date.getDate()).toString().padStart(2, '0') +
     ` — <strong>${index}</strong>`;
+  let stat = localStorage.getItem('problemStatus-' + index);
+  if (stat !== null && stat !== "0" && index !== puzzleId) {
+    if (stat === 'fail')
+      a.classList.add('fail');
+    else
+      a.classList.add('success');
+  }
   if (index === puzzleId) {
     a.classList.add('current');
+    currentPuzzleLink = a;
     a.setAttribute('href', `javascript:closeModal()`);
   } else {
     a.setAttribute('href', `/${index}?past`);
@@ -1316,18 +1328,24 @@ const puzzleLink = (index) => {
   return a;
 };
 
-const dailyList = ['EX', 'PH'];
-
 if (isDaily) {
   document.getElementById('icon-btn-archive').addEventListener('click', () => {
     showModal('modal-archive');
+    if (currentPuzzleLink !== undefined) {
+      const ot = currentPuzzleLink.offsetTop;
+      const hgt = currentPuzzleLink.clientHeight;
+      const H = document.getElementById('modal-archive').clientHeight;
+      const cent = ot + hgt / 2;
+      document.getElementById('modal-archive').scrollTop = cent - H / 2;
+    }
+
   });
   const container = document.getElementById('archive-container');
   availablePuzzleIds.sort((x, y) => {
     let xd = getPuzzleId(x);
     let yd = getPuzzleId(y);
-    if (xd[0] > yd[0]) return -1;
-    if (xd[0] < yd[0]) return 1;
+    if (xd[0] > yd[0]) return 1;
+    if (xd[0] < yd[0]) return -1;
     if (xd[1] > yd[1]) return 1;
     if (xd[1] < yd[1]) return -1;
     return 0;
@@ -1338,13 +1356,9 @@ if (isDaily) {
   let decomposition = getPuzzleId(puzzleId);
   let id = decomposition[0].toString().padStart(3, '0');
   let suffix = undefined;
-  if (decomposition[1] === '')
-    suffix = dailyList[0];
-  else {
-    let idx = dailyList.indexOf(suffix);
-    if (idx !== -1 && idx !== dailyList.length - 1)
-      suffix = dailyList[idx] + 1;
-  }
+  let idx = dailyList.indexOf(decomposition[1]);
+  if (idx !== -1 && idx !== dailyList.length - 1)
+    suffix = dailyList[idx + 1];
   if (suffix !== undefined && availablePuzzleIds.indexOf(id + suffix) != -1) {
     let container = document.getElementById('next-puzzle-container');
     container.classList.remove('hidden')
