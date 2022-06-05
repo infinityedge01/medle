@@ -119,7 +119,7 @@ const debug = false;
 const indexHtmlContents = new TextDecoder().decode(fs.readFileSync('page/index.html'));
 const indexTemplate = etaCompile(indexHtmlContents);
 
-const epoch = new Date('2022-05-26T16:00:00Z');
+const epoch = new Date('2022-06-04T16:00:00Z');
 const todaysPuzzleIndex = () => Math.ceil((new Date() - epoch) / 86400000);
 const todaysPuzzle = () => todaysPuzzleIndex().toString().padStart(3, '0');
 
@@ -387,8 +387,8 @@ const handler = async (req, res) => {
   respond_request(resp, res);
 };
 
-const port = process.env.PORT;
-// const port = 2222;
+//const port = process.env.PORT;
+const port = 2222;
 // log(`http://localhost:${port}/`);
 
 const server = http.createServer(handler)

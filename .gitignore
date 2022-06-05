@@ -1,3 +1,6 @@
 .vscode/launch.json
 .vscode/sftp.json
 .gitignore
+node_modules
+scratch
+bak

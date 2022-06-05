@@ -1,26 +1,41 @@
 tune:
-  - [2, 14, -12]
-  - [3, 2]
-  - [1+, 12, -10]
-  - [7, 12, -10]
-  - [5, 12, -8]
-  - [1, 12]
   - [3, 4]
-  - [5, 4]
-tuneBeatDur: 90
-tunePitchBase: F#4
-metronome: [-2, 4]
+  - [1, 2]
+  - [6-, 4]
+  - [6-, 2]
+  - [2, 2]
+  - [2, 2]
+  - [1, 2]
+  - [2, 14]
+  - [2, 4]
+  - [7-, 2]
+  - [5-, 4]
+  - [5-, 2]
+  - [1, 2]
+  - [1, 2]
+  - [2, 2]
+  - [1, 14]
+tuneBeatDur: 120
+tunePitchBase: D5
+metronome: [0, 4]
 
-tuneRevealBeatDur: 15000/170
-tuneRevealOffset: 15000/170*2
+tuneRevealBeatDur: 15000/103
+tuneRevealOffset: 15000/103*16
 
 zh-Hans:
-  title: Seraphic Chicken（セラフィックチキン）
-  author: Zun
-  desc: 东方鬼形兽中，3面BOSS庭渡久侘歌的主题曲。
+  title: Wandering Singer
+  author: 珈乐Carol
+  desc: |
+    「那故事还念念不忘，骑士带她逃往远方」
+    珈乐Carol的个人单曲，发布于2022年4月22日。
+    https://www.bilibili.com/video/av683415035
+  image: True
 en:
-  title: Seraphic Chicken（セラフィックチキン）
-  author: Zun
-  desc: The stage 3 boss Kutaka Niwatari's theme, from Wily Beast and Weakest Creature.
+  title: Wandering Singer
+  author: 珈乐Carol
+  desc: |
+    「那故事还念念不忘，骑士带她逃往远方」
+    珈乐Carol的个人单曲，发布于2022年4月22日。
+    https://www.bilibili.com/video/av683415035
 
-curator: 榆木华
+curator: 粒小鸟

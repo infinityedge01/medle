@@ -1,24 +1,31 @@
 tune:
-  - [5, 16, -15]
-  - [6, 16, -15]
+  - [5-, 16, -15]
+  - [5-, 16, -15]
+  - [5-, 16, -15]
   - [5, 16, -14]
-  - [3, 2]
-  - [2, 14, 2]
-  - [1, 16]
-tuneBeatDur: 110
-tunePitchBase: F5
-metronome: [6, 4]
+  - [3, 16, -14]
+  - [2, 16, -14]
+  - [3, 16, -14]
+  - [2, 16, -15]
+  - [1, 16, -14]
+  - [1, 16, 0]
+  
 
-tuneRevealBeatDur: 15000/139
-tuneRevealOffset: 15000/139*64
+tuneBeatDur: 120
+tunePitchBase: D5
+metronome: [3, 4]
+
+tuneRevealBeatDur: 15000/103
+tuneRevealOffset: 15000/103*16
 
 zh-Hans:
-  title: 众神眷恋的幻想乡（神々が恋した幻想郷）
-  author: Zun
-  desc: 东方风神录3面主题曲。
+  title: Wandering Singer
+  author: 珈乐Carol
+  desc: 「就算是太阳更明亮，也能点亮你的翅膀」\n 珈乐Carol的个人单曲，发布于2022年4月22日。
+  image: True
 en:
-  title: The Gensokyo the Gods Loved（神々が恋した幻想郷）
-  author: Zun
-  desc: The stage 3 theme from Mountain of Faith.
+  title: Wandering Singer
+  author: 珈乐Carol
+  desc: 「就算是太阳更明亮，也能点亮你的翅膀」\n 珈乐Carol的个人单曲，发布于2022年4月22日。
 
-curator: 榆木华
+curator: 粒小鸟

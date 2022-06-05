@@ -59,7 +59,7 @@ body.dark {
 
 #icon-btns-container {
   position: absolute;
-  top: 16px;
+  top: 21px;
   padding: 0 8px;
   width: calc(100% - 16px);
 }
@@ -1261,4 +1261,32 @@ body.dark .visualizerRail.deep {
 
 #btn-stat .hidden {
   display: none;
+}
+
+#head-bar {
+  position: static;
+  height: 5px;
+  width: 100%;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+.colorbar{
+  float:left;
+  height:5px;
+  width: 20%;
+}
+#ava{
+  background-color: #9AC8E2
+}
+#bella{
+  background-color: #DB7D74
+}
+#carol{
+  background-color: #B8A6D9
+}
+#diana{
+  background-color: #E799B0
+}
+#eileen{
+  background-color: #576690
 }
