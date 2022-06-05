@@ -880,8 +880,8 @@ const startGame = (savedGuesses = []) => {
   new ClipboardJS(btnShare, {
     text: () => {
       btnShare.classList.add('copied');
-      const prefix = `TOUHOU Medle ${puzzleId} ${succeeded ? attResults.length : 'X'}/${attemptsLimit}\n`;
-      const suffix = `https://medle.akashiya.top/` +
+      const prefix = `A-SOUL Medle ${puzzleId} ${succeeded ? attResults.length : 'X'}/${attemptsLimit}\n`;
+      const suffix = `https://medle.infedg.xyz/` +
         (puzzleId === todayDaily ? '' : puzzleId);
       return prefix +
         attResults.map((result) => result.map((r) => {
