@@ -1,10 +1,10 @@
-# TOUHOU Medle
+# A-SOUL Medle
 
-[**medle.akashiya.top**](https://medle.akashiya.top/)
+[**medle.infedg.xyz**](https://medle.infedg.xyz/)
 
-曲库为东方曲的旋律猜谜游戏，每日更新~
+曲库为A-SOUL五位成员（向晚，贝拉，珈乐，嘉然，乃琳）原唱曲及翻唱曲的旋律猜谜游戏，每日更新~
 
-TOUHOU melody puzzle game (available in en/zh)
+A-SOUL melody puzzle game (available in en/zh)
 
 ## [zh] 服务端程序
 
