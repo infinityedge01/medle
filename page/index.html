@@ -431,11 +431,7 @@
           <span data-t='links'></span>
           <a href='https://medle.0-th.art'><span data-t='link-1'></span></a>
           <a href='http://medle.phystack.top/'><span data-t='link-2'></span></a>
-        </span>
-      </div>
-      <div style='color: #FFF'>
-        <span id='bonuses'>
-          <span data-t='bonus'></span>
+          <a href='https://medle.akashiya.top/'><span data-t='link-3'></span></a>
         </span>
       </div>
       <div class='bottom-shadow'></div>
@@ -469,8 +465,8 @@
         </div>
       </div>
       <p id='reveal-desc' data-t='=desc'></p>
-      <% if (it['zh-Hans'].image) { %>
-      <img src='/reveal/<%= it.id %>.jpg' data-t='=image'>
+      <% if (it['zh-Hans'].link) { %>
+        <a href="<%= it['zh-Hans'].link %>">传送门</a>
       <% } %>
       <div id='btn-share'>
         <span id='btn-share-text-share'><span class='iconfont' style='visibility: hidden'>&#x2714;</span><span
@@ -485,6 +481,9 @@
         <p style='color: #999' data-t='next-puzzle'></p>
       </div>
       <% } %>
+      <% if (it['zh-Hans'].image) { %>
+        <img src='/reveal/<%= it.id %>.jpg' data-t='=image'>
+        <% } %>
       <p style='color: #999'><span class='iconfont'>&#128064; </span>
         <span id='total-visitors'>-</span>&nbsp;<span data-t='visitors'></span>
       </p>

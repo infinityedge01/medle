@@ -1,0 +1,44 @@
+tune:
+  - [1, 2]
+  - [1, 2]
+  - [5, 2]
+  - [1, 4]
+  - [1, 2]
+  - [1, 2]
+  - [7-, 2]
+  - [1, 2]
+  - [2, 2]
+  - [1, 2]
+  - [7-, 2]
+  - [1, 2]
+  - [1, 2]
+  - [5-, 4]
+  
+  
+  
+tuneBeatDur: 156
+tunePitchBase: D5
+metronome: [6, 4]
+
+tuneRevealBeatDur: 15000/96
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 失眠飞行
+  author: 向晚Ava/嘉然Diana
+  desc: |
+    「我想和你，一起闯进森林潜入海底」
+    嘉晚饭翻唱曲目，表演于2021年7月2日直播。
+    嘉晚饭永远是真的！
+    明天（6月12日）是向晚的生日，顶碗人会一起陪着你。
+  image: True
+  link: https://www.bilibili.com/video/av206634456
+en:
+  title: 失眠飞行
+  author: 向晚Ava/嘉然Diana
+  desc: |
+    「我想和你，一起闯进森林潜入海底」
+    嘉晚饭翻唱曲目，表演于2021年7月2日直播。
+    嘉晚饭永远是真的！
+    明天（6月12日）是向晚的生日，顶碗人会一起陪着你。
+curator: 粒小鸟

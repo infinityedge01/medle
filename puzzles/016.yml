@@ -1,0 +1,37 @@
+tune:
+  - [6, 4]
+  - [3, 2]
+  - [6, 2]
+  - [4, 4]
+  - [2, 2]
+  - [1, 2]
+  - [7-, 2]
+  - [5-, 2]
+  - [5-, 1]
+  - [5, 3]
+  - [3, 4]
+  
+  
+  
+tuneBeatDur: 176
+tunePitchBase: G#4
+metronome: [0, 4]
+
+tuneRevealBeatDur: 15000/85
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 男孩别哭
+  author: 珈乐Carol
+  desc: |
+    「男孩别哭 美丽世界的孤儿」
+    珈乐翻唱曲目，表演于2021年8月21日直播。
+  image: True
+  link: https://www.bilibili.com/video/av932741409
+en:
+  title: 男孩别哭
+  author: 珈乐Carol
+  desc: |
+    「男孩别哭 美丽世界的孤儿」
+    珈乐翻唱曲目，表演于2021年8月21日直播。
+curator: 粒小鸟

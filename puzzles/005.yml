@@ -1,0 +1,33 @@
+tune:
+  - [3, 2]
+  - [4, 2]
+  - [5, 2]
+  - [4, 2]
+  - [3, 2]
+  - [3, 6]
+  - [2, 2]
+  - [2, 8]
+  
+  
+tuneBeatDur: 110
+tunePitchBase: C5
+metronome: [2, 4]
+
+tuneRevealBeatDur: 15000/120
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 迷迭香
+  author: 乃琳Eileen
+  desc: |
+    「你随风飘扬的笑，有迷迭香的味道」
+    乃琳的代表翻唱曲目之一，有众多翻唱版本，此前曾作为直播的ED使用。
+  image: True
+  link: https://www.bilibili.com/video/av845396404
+en:
+  title: 迷迭香
+  author: 乃琳Eileen
+  desc: |
+    「你随风飘扬的笑，有迷迭香的味道」
+    乃琳的代表翻唱曲目之一，有众多翻唱版本，此前曾作为直播的ED使用。
+curator: 粒小鸟

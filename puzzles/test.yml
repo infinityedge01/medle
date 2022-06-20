@@ -11,7 +11,7 @@ tune:
   - [1, 16, 0]
   
 
-tuneBeatDur: 120
+tuneBeatDur: 150
 tunePitchBase: D5
 metronome: [3, 4]
 

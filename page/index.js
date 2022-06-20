@@ -1302,7 +1302,7 @@ const puzzleLink = (index) => {
   let decomposition = getPuzzleId(index);
   let id = decomposition[0];
   // let suffix = decomposition[1];
-  let date = new Date('2022-05-27');
+  let date = new Date('2022-06-05');
   const a = document.createElement('a');
   a.classList.add('puzzle-link');
   date.setDate(date.getDate() + (id - 1));

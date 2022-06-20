@@ -1,0 +1,42 @@
+tune:
+  - [6-, 16, -14]
+  - [3, 16, -14]
+  - [2, 16, -14]
+  - [1, 16, -14]
+  - [2, 16, -14]
+  - [1, 16, -12]
+  - [6-, 16, 2]
+  
+  
+tuneBeatDur: 125
+tunePitchBase: E5
+metronome: [2, 4]
+
+tuneRevealBeatDur: 15000/120
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 星光派对
+  author: 珈乐Carol/乃琳Eileen
+  desc: |
+    让月光🌙摇啊摇啊💃💃💃
+    气氛💕开始变微妙💜💜💜
+    当我😘放慢了步调🚶🚶🚶
+    你会不会😯向我靠👩‍❤️‍💋‍👩👩‍❤️‍💋‍👩👩‍❤️‍💋‍👩
+    琳狼翻唱曲目，表演于2022年4月23日直播。本曲在A-SOUL直播中出现过多次，乃琳翻唱，珈乐翻跳过此曲，极致风情，充满了魅惑魔力。
+    珈乐翻跳：https://www.bilibili.com/video/av296438913
+    琳狼翻唱：见传送门
+  image: True
+  link: https://www.bilibili.com/video/av340930296
+en:
+  title: 星光派对
+  author: 珈乐Carol/乃琳Eileen
+  desc: |
+    让月光🌙摇啊摇啊💃💃💃
+    气氛💕开始变微妙💜💜💜
+    当我😘放慢了步调🚶🚶🚶
+    你会不会😯向我靠👩‍❤️‍💋‍👩👩‍❤️‍💋‍👩👩‍❤️‍💋‍👩
+    琳狼翻唱曲目，表演于2022年4月23日直播。本曲在A-SOUL直播中出现过多次，乃琳翻唱，珈乐翻跳过此曲，极致风情，充满了魅惑魔力。
+    珈乐翻跳：https://www.bilibili.com/video/av296438913
+    琳狼翻唱：见传送门
+curator: 粒小鸟

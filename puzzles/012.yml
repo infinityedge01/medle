@@ -1,0 +1,35 @@
+tune:
+  - [1, 2]
+  - [2, 2]
+  - [3, 14, -3, -3, -5, -2]
+  - [5, 3, 5, 3, 4] 
+  - [2, 8, -7]
+  - [5, 11, -3, -5, -1]
+  - [3, 8, 3]
+  - [5, 1]
+  - [6, 1]
+  
+tuneBeatDur: 227
+tunePitchBase: Eb5
+metronome: [0, 4]
+
+tuneRevealBeatDur: 15000/66
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 路过人间
+  author: 乃琳Eileen
+  desc: |
+    「人对爱和永远 应该有幻觉/路过人间 也才几十年/却为了爱 勇于蹉跎岁月」
+    乃琳翻唱曲目，表演于2021年6月16日直播。
+    神秘链接：https://www.bilibili.com/video/av641550543
+  image: True
+  link: https://www.bilibili.com/video/av673722368
+en:
+  title: 路过人间
+  author: 乃琳Eileen
+  desc: |
+    「人对爱和永远 应该有幻觉/路过人间 也才几十年/却为了爱 勇于蹉跎岁月」
+    乃琳翻唱曲目，表演于2021年6月16日直播。
+    神秘链接：https://www.bilibili.com/video/av641550543
+curator: 粒小鸟

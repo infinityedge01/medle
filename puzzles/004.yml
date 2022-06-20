@@ -1,0 +1,35 @@
+tune:
+  - [1+, 4]
+  - [7, 2]
+  - [7, 4]
+  - [1+, 6]
+  - [1+, 2]
+  - [7, 4]
+  - [5, 2]
+  - [5, 4]
+  - [5, 2]
+  - [7, 4]
+  - [1+, 14]
+  
+tuneBeatDur: 133
+tunePitchBase: F4
+metronome: [0, 2]
+
+tuneRevealBeatDur: 15000/100
+tuneRevealOffset: 
+
+zh-Hans:
+  title: Spring
+  author: 向晚Ava
+  desc: |
+    「是风吗，在吹拂我的枝桠 / 是你呀，说要守护我长大」
+    向晚作词谱曲的原创曲，第一次演出是在2022年4月2日直播「向晚50万粉丝纪念回」之上。
+  image: True
+  link: https://www.bilibili.com/video/av640294653
+en:
+  title: Spring
+  author: 向晚Ava
+  desc: |
+    「是风吗，在吹拂我的枝桠 / 是你呀，说要守护我长大」
+    向晚作词谱曲的原创曲，第一次演出是在2022年4月2日直播「向晚50万粉丝纪念回」之上。
+curator: 粒小鸟

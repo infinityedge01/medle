@@ -1,0 +1,41 @@
+tune:
+  - [3+, 4]
+  - [1+, 4]
+  - [1+, 4]
+  - [6, 4]
+  - [1+, 2]
+  - [6, 4]
+  - [1+, 8]
+  - [3, 2]
+  - [5, 4]
+  - [5, 2]
+  - [3, 2]
+  - [5, 2]
+  - [6, 4]
+  - [5, 6]
+  
+  
+tuneBeatDur: 96
+tunePitchBase: F#4
+metronome: [0, 4]
+
+tuneRevealBeatDur: 15000/156
+tuneRevealOffset: 15000/156*11
+
+zh-Hans:
+  title: 海芋恋
+  author: 贝拉Bella
+  desc: |
+    「我们在白白净净的湖面，在海芋的季节」
+    贝拉翻唱曲目，表演与2021年7月23日抖音直播。
+    当天五人合唱的版本也很好听！
+  image: True
+  link: https://www.bilibili.com/video/av206871411
+en:
+  title: 海芋恋
+  author: 贝拉Bella
+  desc: |
+    「我们在白白净净的湖面，在海芋的季节」
+    贝拉翻唱曲目，表演与2021年7月23日抖音直播。
+    当天五人合唱的版本也很好听！
+curator: 粒小鸟

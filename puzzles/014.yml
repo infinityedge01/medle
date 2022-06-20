@@ -1,0 +1,39 @@
+tune:
+  - [5-, 2]
+  - [1, 2]
+  - [2, 2]
+  - [3, 4]
+  - [2, 2]
+  - [3, 2]
+  - [4, 2]
+  - [3, 2]
+  - [1, 2]
+  - [2, 4]
+  - [1, 2]
+  - [5, 2]
+  - [5, 6]
+  
+tuneBeatDur: 156
+tunePitchBase: C5
+metronome: [2, 4]
+
+tuneRevealBeatDur: 15000/96
+tuneRevealOffset: 15000/96*57.5
+
+zh-Hans:
+  title: 说爱你
+  author: 向晚Ava
+  desc: |
+    「我的世界 变得奇妙更难以言喻/还以为 是从天而降的梦境」
+    向晚翻唱曲目，表演于2021年2月14日直播。
+    我的怀疑 所有答案因你而明白，转啊转 就真的遇见 Ms.Night
+  image: True
+  link: https://www.bilibili.com/video/av374205512
+en:
+  title: 说爱你
+  author: 向晚Ava
+  desc: |
+    「我的世界 变得奇妙更难以言喻/还以为 是从天而降的梦境」
+    向晚翻唱曲目，表演于2021年2月14日直播。
+    我的怀疑 所有答案因你而明白，转啊转 就真的遇见 Ms.Night
+curator: 粒小鸟

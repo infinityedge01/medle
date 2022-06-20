@@ -1,0 +1,37 @@
+tune:
+  - [5, 16, -8, -6]
+  - [3+, 8]
+  - [2+, 8]
+  - [1+, 4]
+  - [3, 4]
+  - [1+, 6]
+  - [6, 4, -2]
+  - [5, 4, 2, 2, 4]
+  - [1, 2]
+  - [5, 2]
+  - [3, 6]
+  
+tuneBeatDur: 150
+tunePitchBase: B4
+metronome: [0, 4]
+
+tuneRevealBeatDur: 15000/85
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 小宇
+  author: 向晚Ava
+  desc: |
+    「不管未来会怎么样，至少我们现在很开心」
+    向晚翻唱曲目，表演于2021年6月12日向晚生日会直播。
+    不管结局会怎么样，我想真的跟你在一起。
+  image: True
+  link: https://www.bilibili.com/video/av758504326
+en:
+  title: 小宇
+  author: 向晚Ava
+  desc: |
+    「不管未来会怎么样，至少我们现在很开心」
+    向晚翻唱曲目，表演于2021年6月12日向晚生日会直播。
+    不管结局会怎么样，我想真的跟你在一起。
+curator: 粒小鸟

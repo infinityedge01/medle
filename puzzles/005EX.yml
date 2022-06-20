@@ -1,0 +1,36 @@
+tune:
+  - [6-, 2]
+  - [6-, 2]
+  - [6-, 2]
+  - [3, 4]
+  - [2, 4]
+  - [1, 4]
+  - [6-, 4]
+  - [3, 8]
+  - [2, 8]
+  - [3, 8]
+
+tuneBeatDur: 80
+tunePitchBase: C5
+metronome: [6, 4]
+
+tuneRevealBeatDur: 15000/175
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 猫中毒
+  author: 嘉然Diana
+  desc: |
+    嘉然的代表翻唱曲目之一，在Bilibili有着超过1300w的播放量，是A-SOUL播放量与知名度最高的视频。
+    在2021年的大引流时代中本曲被大量用于发病视频与二创中，广为传播，成为了A-SOUL重要的文化符号之一。
+    「嘉然，我真的好喜欢你啊，mua！为了你，我要听猫中毒！」
+  image: True
+  link: https://www.bilibili.com/video/av714893724
+en:
+  title: 猫中毒
+  author: 嘉然Diana
+  desc: |
+    嘉然的代表翻唱曲目之一，在Bilibili有着超过1300w的播放量，是A-SOUL播放量与知名度最高的视频。
+    在2021年的大引流时代中本曲被大量用于发病视频与二创中，广为传播，成为了A-SOUL重要的文化符号之一。
+    「嘉然，我真的好喜欢你啊，mua！为了你，我要听猫中毒！」
+curator: 粒小鸟

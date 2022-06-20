@@ -1,0 +1,35 @@
+tune:
+  - [6-, 2, 2, 2]
+  - [7-, 2]
+  - [1, 2]
+  - [7-, 2]
+  - [6-, 2]
+  - [5-, 2]
+  - [3, 4, 6]
+  
+tuneBeatDur: 153
+tunePitchBase: F#4
+metronome: [2, 4]
+
+tuneRevealBeatDur: 15000/98
+tuneRevealOffset: 15000/98*41
+
+zh-Hans:
+  title: AvA去哪儿
+  author: A-SOUL
+  desc: |
+    「AvA AvA 我们去哪里呀，你就是我的天大和地大」
+    A-SOUL翻唱改编曲目，表演于2021年12月18日直播。
+    晚比，你会唱小星星吗？你又跑调喽~
+    今天（2022年6月19日）是父亲节。祝父亲节快乐！
+  image: True
+  link: https://www.bilibili.com/video/av464939532
+en:
+  title: AvA去哪儿
+  author: A-SOUL
+  desc: |
+    「AvA AvA 我们去哪里呀，你就是我的天大和地大」
+    A-SOUL翻唱改编曲目，表演于2021年12月18日直播。
+    晚比，你会唱小星星吗？你又跑调喽~
+    今天（2022年6月19日）是父亲节。祝父亲节快乐！
+curator: 粒小鸟

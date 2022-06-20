@@ -1,0 +1,34 @@
+tune:
+  - [3, 8]
+  - [6-, 4]
+  - [2, 8]
+  - [5-, 4]
+  - [6-, 4]
+  - [7-, 4]
+  - [5-, 4]
+  - [6-, 12]
+
+tuneBeatDur: 70
+tunePitchBase: F5
+metronome: [0, 4]
+
+tuneRevealBeatDur: 15000/180
+tuneRevealOffset: 0
+
+zh-Hans:
+  title: 蜜月アン·ドゥ·トロワ
+  author: 贝拉Bella
+  desc: |
+    「Chasse 'n' Whisk 'n' Natural-Turn，貴方に魔法をあげる」
+    贝拉的翻唱曲，在个人单曲「Shiny Dancer」发布之前作为直播的ED。
+    其在2022年2月26日直播「贝拉50万粉丝纪念回」舞过此曲。
+  image: True
+  link: https://www.bilibili.com/video/av424481026
+en:
+  title: 蜜月アン·ドゥ·トロワ
+  author: 贝拉Bella
+  desc: |
+    「Chasse 'n' Whisk 'n' Natural-Turn，貴方に魔法をあげる」
+    贝拉的翻唱曲，在个人单曲「Shiny Dancer」发布之前作为直播的ED。
+    其在2022年2月26日直播「贝拉50万粉丝纪念回」舞过此曲。
+curator: 粒小鸟
